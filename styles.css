@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap');
+
+:root {
+  --playball-cursive: 'Playball', cursive;
+  --gold-yellow-color: #FFBD1B;
+  --text-center: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #AA381E;
+  line-height: 1.25;
+  font-family: 'Oranienbaum', serif;
+}
+
+.welcome {
+  color: var(--gold-yellow-color);
+  text-align: var(--text-center);
+  font-family: var(--playball-cursive);
+  font-size: 6rem;
+  font-weight: 400;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  transform: translateY(-50%);
+  animation: welcome 3s ease-in-out;
+}
+
+header {
+  font-family: var(--playball-cursive);
+  text-align: var(--text-center);
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+header > h1 {
+  color: var(--gold-yellow-color);
+  font-size: 7rem;
+  font-weight: 400;
+}
+
+header {
+  visibility: hidden;
+}
+
+.header-active {
+  visibility: visible;
+  animation: text 2.5s ease-in-out;
+}
+
+nav span {
+  color: var(--gold-yellow-color);
+  font-size: 2rem;
+  padding: 0 15px;
+  text-decoration: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+nav span:hover {
+  color: var(--gold-yellow-color);
+  border-bottom: 1px solid var(--gold-yellow-color);;
+}
+
+
+section {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin: 30px auto;
+}
+
+/* -- ABOUT -- */
+
+section #about {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-row {
+  display: none;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-gallery {
+  margin-left: 20px;
+  font-size: 0;
+}
+
+.about-gallery img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.about-active {
+  display: block;
+  animation: text 1.5s ease-in-out;
+}
+
+/* -- MENU -- */
+
+section #menu {
+  width: 90%;
+  margin: auto;
+  text-align: left;
+}
+
+.menu-row {
+  display: none;
+}
+
+.menu-title {
+  color: var(--gold-yellow-color);
+  text-align: var(--text-center);
+  font-family: var(--playball-cursive);
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.menu-appetizers {
+  margin-top: 30px;
+}
+
+.appetizers-list, .entree-list, .dessert-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 25px 30px;
+}
+
+.menu-active {
+  display: block;
+  animation: text 1.5s ease-in-out;
+}
+
+/* -- UTILITIES -- */
+
+h3 {
+  font-weight: normal;
+  font-size: 1.75rem;
+}
+
+h3 ~ p {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* -- KEY FRAMES -- */
+
+@keyframes welcome {
+  0% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* -- MEDIA QUERIES -- */
+
+@media (max-width: 991px) {
+  header > h1 {
+    font-size: 5.5rem;
+  }
+  
+  .about-gallery img:nth-child(n+5){
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .welcome, header > h1 {
+    font-size: 5rem;
+  }
+  
+  nav span {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  
+  .welcome, header > h1 {
+    font-size: 4rem;
+  }
+  
+  nav span {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+  
+  .about-gallery img:nth-child(n+2) {
+    display: none;
+  }
+  
+  .about-gallery img {
+    width: 100%;
+    height: 500px;
+    margin-top: 0;
+  }
+}
