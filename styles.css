@@ -78,6 +78,15 @@ section {
   margin: 30px auto;
 }
 
+.toggle-content {
+  display: none;
+}
+
+.toggle-content-active {
+  display: block;
+  animation: text 1.5s ease-in-out;
+}
+
 /* -- ABOUT -- */
 
 section #about {
@@ -85,10 +94,6 @@ section #about {
   width: 90%;
   margin: 0 auto;
   line-height: 1.6;
-}
-
-.about-row {
-  display: none;
 }
 
 .about-content {
@@ -107,21 +112,12 @@ section #about {
   object-fit: cover;
 }
 
-.about-active {
-  display: block;
-  animation: text 1.5s ease-in-out;
-}
-
 /* -- MENU -- */
 
 section #menu {
   width: 90%;
   margin: auto;
   text-align: left;
-}
-
-.menu-row {
-  display: none;
 }
 
 .menu-title {
@@ -140,11 +136,6 @@ section #menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 25px 30px;
-}
-
-.menu-active {
-  display: block;
-  animation: text 1.5s ease-in-out;
 }
 
 /* RESERVATIONS */
@@ -197,15 +188,6 @@ form button {
 
 form button:hover {
   cursor: pointer;
-}
-
-.reservation-active {
-  display: block;
-  animation: text 1.5s ease-in-out;
-}
-
-.reservation-row {
-  display: none;
 }
 
 /* -- UTILITIES -- */
