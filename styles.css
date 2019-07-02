@@ -199,6 +199,11 @@ form button:hover {
   cursor: pointer;
 }
 
+.reservation-active {
+  display: block;
+  animation: text 1.5s ease-in-out;
+}
+
 /* -- UTILITIES -- */
 
 h3 {
