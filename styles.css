@@ -147,6 +147,58 @@ section #menu {
   animation: text 1.5s ease-in-out;
 }
 
+/* RESERVATIONS */
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  border: 5px solid var(--gold-yellow-color);
+  border-radius: 3px;
+}
+
+form label {
+  font-family: var(--playball-cursive);
+  color: var(--gold-yellow-color);
+  font-size: 1.5rem;
+}
+
+.form-group {
+  padding: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  font-family: var(--playball-cursive);
+  padding: 5px;
+}
+
+form button {
+  background-color: var(--gold-yellow-color);
+  height: 40px;
+  margin: 15px auto;
+  width: 40%;
+  font-family: var(--playball-cursive);
+  font-size: 1.25rem;
+  color: #AA381E;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
 /* -- UTILITIES -- */
 
 h3 {
