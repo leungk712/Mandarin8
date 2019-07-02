@@ -204,6 +204,10 @@ form button:hover {
   animation: text 1.5s ease-in-out;
 }
 
+.reservation-row {
+  display: none;
+}
+
 /* -- UTILITIES -- */
 
 h3 {
