@@ -1,12 +1,12 @@
+const welcome = document.querySelector('.welcome');
+const header = document.querySelector('header');
 const aboutBtn = document.querySelector('#about-btn');
 const menuBtn = document.querySelector('#menu-btn');
 const reservationBtn = document.querySelector('#reservation-btn');
 const contactBtn = document.querySelector('#contact-btn');
-const header = document.querySelector('header');
-const navLink = document.querySelectorAll('.nav-link');
 const aboutContent = document.querySelector('.about-row');
 const menuContent = document.querySelector('.menu-row');
-const welcome = document.querySelector('.welcome');
+const reservationContent = document.querySelector('.reservation-row');
 
 function welcomeLoad(){
   setTimeout(() => {
@@ -34,3 +34,8 @@ function menu(){
   });
 } menu();
 
+function reservation(){
+  reservationBtn.addEventListener('click',() => {
+    reservationContent.classList.toggle('reservation-active');
+  });
+} reservation();
