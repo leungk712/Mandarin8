@@ -78,13 +78,8 @@ section {
   margin: 30px auto;
 }
 
-.toggle-content {
+#about-row, #menu-row, #reservation-row, #contact-row {
   display: none;
-}
-
-.toggle-content-active {
-  display: block;
-  animation: text 1.5s ease-in-out;
 }
 
 /* -- ABOUT -- */
@@ -207,6 +202,11 @@ p {
 
 .hide {
   display: none;
+}
+
+.show {
+  display: block !important;
+  animation: text 1.5s ease-in-out;
 }
 
 /* -- KEY FRAMES -- */
