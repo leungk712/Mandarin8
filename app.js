@@ -6,6 +6,7 @@ const menuBtn = document.querySelector('nav #menu-btn');
 const reservationBtn = document.querySelector('nav #reservation-btn');
 const contactBtn = document.querySelector('nav #contact-btn');
 
+let content = document.querySelectorAll('.content');
 const aboutContent = document.querySelector('#about-row');
 const menuContent = document.querySelector('#menu-row');
 const reservationContent = document.querySelector('#reservation-row');
@@ -23,40 +24,38 @@ function headerLoad(){
   }, 3500);
 } headerLoad();
 
-function about(){
+function about() {
   aboutBtn.addEventListener('click',() => {
     setTimeout(() => {
+      removeShow();
       aboutContent.classList.toggle('show');
-      menuContent.classList.remove('show');
-      reservationContent.classList.remove('show');
-      contactContent.classList.remove('show');
     },500);
   });
 } about();
 
 function menu(){
   menuBtn.addEventListener('click',() => {
+    removeShow();
     menuContent.classList.toggle('show');
-    aboutContent.classList.remove('show');
-    reservationContent.classList.remove('show');
-    contactContent.classList.remove('show');
   });
 } menu();
 
 function reservation(){
   reservationBtn.addEventListener('click',() => {
+    removeShow();
     reservationContent.classList.toggle('show');
-    aboutContent.classList.remove('show');
-    menuContent.classList.remove('show');
-    contactContent.classList.remove('show');
   });
 } reservation();
 
 function contact(){
   contactBtn.addEventListener('click',() => {
+    removeShow();
     contactContent.classList.toggle('show');
-    aboutContent.classList.remove('show');
-    menuContent.classList.remove('show');
-    reservationContent.classList.remove('show');
   });
 } contact();
+
+function removeShow(){
+  for(let i = 0; i < content.length; i++) {
+    content[i].classList.remove('show');
+  }
+}
