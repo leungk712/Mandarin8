@@ -107,6 +107,10 @@ section #about {
   object-fit: cover;
 }
 
+.about-gallery img:hover {
+  transform: scale(1.05);
+}
+
 /* -- MENU -- */
 
 section #menu {
@@ -134,7 +138,7 @@ section #menu {
 }
 
 .allergy-content {
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 
@@ -187,6 +191,36 @@ form button {
 }
 
 form button:hover {
+  cursor: pointer;
+}
+
+/* CONTACT */
+
+section #contact {
+  width: 80%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+.feedback-btn {
+  padding: 1rem 2.5rem;
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #fdfff0;
+  color: var(--gold-yellow-color);
+  border: none;
+  outline: none;
+}
+
+.feedback-btn:hover {
+  background-color: var(--gold-yellow-color);
+  color: #fdfff0;
   cursor: pointer;
 }
 
@@ -244,14 +278,27 @@ p {
 
 /* -- MEDIA QUERIES -- */
 
+@media only screen and (max-width: 1824px) and (min-width: 1381px) {
+  .about-gallery img:nth-child(n+7){
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1380px) {
+  .about-gallery img:nth-child(n+5){
+    display: none;
+  }
+}
+
 @media (max-width: 991px) {
   header > h1 {
     font-size: 5.5rem;
   }
   
-  .about-gallery img:nth-child(n+5){
-    display: none;
+  form {
+    width: 60%;
   }
+
 }
 
 @media (max-width: 767px) {
@@ -275,11 +322,20 @@ p {
     padding: 0 10px;
   }
   
+  section #about {
+    width: 100%;
+  }
+  
   .about-content {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(2, 1fr);
     margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .about-gallery {
+    margin: 0;
   }
   
   .about-gallery img:nth-child(n+2) {
@@ -289,6 +345,20 @@ p {
   .about-gallery img {
     width: 100%;
     height: 500px;
-    margin-top: 0;
+    padding: 0;
+  }
+  
+  .appetizers-list, .entree-list, .dessert-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  
+  .appetizers-list div, .entree-list div, .dessert-list div {
+    margin: 10px 0;
+  }
+  
+  .contact-info p {
+    font-size: 1.25rem;
   }
 }
