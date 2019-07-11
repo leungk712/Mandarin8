@@ -59,3 +59,5 @@ function removeShow(){
     content[i].classList.remove('show');
   }
 }
+
+window.onload = welcomeLoad;      
