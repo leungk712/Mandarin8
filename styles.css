@@ -3,7 +3,8 @@
 
 :root {
   --playball-cursive: 'Playball', cursive;
-  --gold-yellow-color: #FFBD1B;
+/*   --gold-yellow-color: #FFBD1B; */
+  --golden-sand-color: #eccc68;
   --text-center: center;
 }
 
@@ -20,7 +21,7 @@ html, body {
 }
 
 .welcome {
-  color: var(--gold-yellow-color);
+  color: var(--golden-sand-color);
   text-align: var(--text-center);
   font-family: var(--playball-cursive);
   font-size: 6rem;
@@ -42,7 +43,7 @@ header {
 }
 
 header > h1 {
-  color: var(--gold-yellow-color);
+  color: var(--golden-sand-color);
   font-size: 7rem;
   font-weight: 400;
 }
@@ -57,7 +58,7 @@ header {
 }
 
 nav span {
-  color: var(--gold-yellow-color);
+  color: var(--golden-sand-color);
   font-size: 2rem;
   padding: 0 15px;
   text-decoration: none;
@@ -66,8 +67,8 @@ nav span {
 }
 
 nav span:hover {
-  color: var(--gold-yellow-color);
-  border-bottom: 1px solid var(--gold-yellow-color);;
+  color: var(--golden-sand-color);
+  border-bottom: 1px solid var(--golden-sand-color);
 }
 
 
@@ -120,7 +121,7 @@ section #menu {
 }
 
 .menu-title {
-  color: var(--gold-yellow-color);
+  color: var(--golden-sand-color);
   text-align: var(--text-center);
   font-family: var(--playball-cursive);
   font-weight: normal;
@@ -149,13 +150,13 @@ form {
   flex-direction: column;
   width: 40%;
   margin: 0 auto;
-  border: 5px solid var(--gold-yellow-color);
+  border: 5px solid var(--golden-sand-color);
   border-radius: 3px;
 }
 
 form label {
   font-family: var(--playball-cursive);
-  color: var(--gold-yellow-color);
+  color: var(--golden-sand-color);
   font-size: 1.5rem;
 }
 
@@ -178,7 +179,7 @@ input::placeholder {
 }
 
 form button {
-  background-color: var(--gold-yellow-color);
+  background-color: var(--golden-sand-color);
   height: 40px;
   margin: 15px auto;
   width: 40%;
@@ -213,13 +214,13 @@ section #contact {
   font-size: 1rem;
   font-weight: bold;
   background: #fdfff0;
-  color: var(--gold-yellow-color);
+  color: var(--golden-sand-color);
   border: none;
   outline: none;
 }
 
 .feedback-btn:hover {
-  background-color: var(--gold-yellow-color);
+  background-color: var(--golden-sand-color);
   color: #fdfff0;
   cursor: pointer;
 }
