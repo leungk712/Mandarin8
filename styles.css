@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 
 :root {
   --playball-cursive: 'Playball', cursive;
@@ -17,7 +18,7 @@
 html, body {
   background: #AA381E;
   line-height: 1.25;
-  font-family: 'Oranienbaum', serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .welcome {
